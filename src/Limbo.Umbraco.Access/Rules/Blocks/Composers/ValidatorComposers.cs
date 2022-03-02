@@ -6,8 +6,8 @@ namespace Limbo.Umbraco.Access.Rules.Blocks.Composers {
     [ComposeAfter(typeof(RuleCollectionComposer))]
     public class ValidatorComposers : IUserComposer {
         public void Compose(Composition composition) {
-            composition.Register(typeof(LimitContentValidator));
-            composition.Register(typeof(LimitMediaValidator));
+            composition.Register(typeof(BlockContentValidator));
+            composition.Register(typeof(BlockMediaValidator));
         }
     }
 }

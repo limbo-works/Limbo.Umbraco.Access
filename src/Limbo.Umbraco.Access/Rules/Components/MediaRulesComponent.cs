@@ -11,10 +11,10 @@ using Umbraco.Web;
 namespace Limbo.Umbraco.Access.Rules.Components {
     public class MediaRulesComponent : RulesComponentBase, IComponent {
         private readonly AllowMediaValidator _allowMediaValidator;
-        private readonly LimitMediaValidator _limitMediaValidator;
+        private readonly BlockMediaValidator _limitMediaValidator;
 
         public MediaRulesComponent(AllowMediaValidator allowMediaValidator,
-                                   LimitMediaValidator limitMediaValidator,
+                                   BlockMediaValidator limitMediaValidator,
                                    IUmbracoContextAccessor umbracoContextAccessor,
                                    IProfilingLogger logger,
                                    ILocalizationService localizationService) : base(umbracoContextAccessor, logger, localizationService) {

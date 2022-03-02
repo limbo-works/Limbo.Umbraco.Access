@@ -11,10 +11,10 @@ using Umbraco.Web;
 namespace Limbo.Umbraco.Access.Rules.Components {
     public class ContentRulesComponent : RulesComponentBase, IComponent {
         private readonly AllowContentValidator _allowContentValidator;
-        private readonly LimitContentValidator _limitContentValidator;
+        private readonly BlockContentValidator _limitContentValidator;
 
         public ContentRulesComponent(AllowContentValidator allowContentValidator,
-                                     LimitContentValidator limitContentValidator,
+                                     BlockContentValidator limitContentValidator,
                                      ILocalizationService localizationService,
                                      IProfilingLogger logger,
                                      IUmbracoContextAccessor umbracoContextAccessor) : base(umbracoContextAccessor, logger, localizationService) {

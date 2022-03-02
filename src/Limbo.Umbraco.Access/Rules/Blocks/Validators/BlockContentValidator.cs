@@ -9,21 +9,21 @@ using Umbraco.Core.Services;
 using Umbraco.Web;
 
 namespace Limbo.Umbraco.Access.Rules.Blocks.Validators {
-    public class LimitContentValidator : ContentValidatorBase {
-        public LimitContentValidator(RuleCollection rules, IUmbracoContextAccessor umbracoContextAccessor) : base(umbracoContextAccessor, rules.ContentLimits) { }
+    public class BlockContentValidator : ContentValidatorBase {
+        public BlockContentValidator(RuleCollection rules, IUmbracoContextAccessor umbracoContextAccessor) : base(umbracoContextAccessor, rules.ContentLimits) { }
 
         protected override bool UserIsAllowedToDoAction(IEnumerable<ContentAccessRuleBase> rules, IUser user, IEnumerable<IContent> contentItems, IContentService contentService) {
             var isAllowed = true;
             foreach (var rule in rules) {
-                if (rule is LimitContentLevelAccessRule contentLevelAccessRule) {
+                if (rule is BlockContentLevelAccessRule contentLevelAccessRule) {
                     if (contentItems.Any(item => item.Level == contentLevelAccessRule.Level)) {
                         isAllowed = false;
                     }
-                } else if (rule is LimitContentTypeAccessRule contentContentTypeAccessRule) {
+                } else if (rule is BlockContentTypeAccessRule contentContentTypeAccessRule) {
                     if (contentItems.Any(item => item.ContentType.Alias == contentContentTypeAccessRule.ContentTypeAlias)) {
                         isAllowed = false;
                     }
-                } else if (rule is LimitContentAccessRule) {
+                } else if (rule is BlockContentAccessRule) {
                     if (rule.UserGroups.Any(group => user.Groups.Any(userGroup => userGroup == group))) {
                         isAllowed = false;
                     }

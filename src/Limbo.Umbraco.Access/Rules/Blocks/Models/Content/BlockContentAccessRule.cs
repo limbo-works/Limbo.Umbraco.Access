@@ -4,8 +4,8 @@ using Limbo.Umbraco.Access.UserActions.Models;
 using Umbraco.Core.Models.Membership;
 
 namespace Limbo.Umbraco.Access.Rules.Blocks.Models.Content {
-    public class LimitContentAccessRule : ContentAccessRuleBase {
-        public LimitContentAccessRule(string name, IEnumerable<IUserGroup> userGroups, IEnumerable<ContentUserAction> userActions) : base(name, userGroups, userActions) {
+    public class BlockContentAccessRule : ContentAccessRuleBase {
+        public BlockContentAccessRule(string name, IEnumerable<IUserGroup> userGroups, IEnumerable<ContentUserAction> userActions) : base(name, userGroups, userActions) {
         }
     }
 }
