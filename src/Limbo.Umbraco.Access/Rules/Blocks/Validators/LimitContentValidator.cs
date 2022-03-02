@@ -2,13 +2,13 @@
 using System.Linq;
 using Limbo.Umbraco.Access.Bases.Validators;
 using Limbo.Umbraco.Access.Rules.Bases.Models;
-using Limbo.Umbraco.Access.Rules.Limits.Models.Content;
+using Limbo.Umbraco.Access.Rules.Blocks.Models.Content;
 using Umbraco.Core.Models;
 using Umbraco.Core.Models.Membership;
 using Umbraco.Core.Services;
 using Umbraco.Web;
 
-namespace Limbo.Umbraco.Access.Rules.Limits.Validators {
+namespace Limbo.Umbraco.Access.Rules.Blocks.Validators {
     public class LimitContentValidator : ContentValidatorBase {
         public LimitContentValidator(RuleCollection rules, IUmbracoContextAccessor umbracoContextAccessor) : base(umbracoContextAccessor, rules.ContentLimits) { }
 

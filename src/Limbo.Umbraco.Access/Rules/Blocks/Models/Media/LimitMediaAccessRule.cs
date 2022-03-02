@@ -1,6 +1,6 @@
 ﻿using Limbo.Umbraco.Access.Rules.Bases.Models;
 
-namespace Limbo.Umbraco.Access.Rules.Limits.Models.Media {
+namespace Limbo.Umbraco.Access.Rules.Blocks.Models.Media {
     public class LimitMediaAccessRule : MediaAccessRuleBase {
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Limbo.Umbraco.Access.Rules.Allow.Models.Content;
 using Limbo.Umbraco.Access.Rules.Allow.Models.Media;
-using Limbo.Umbraco.Access.Rules.Limits.Models.Content;
-using Limbo.Umbraco.Access.Rules.Limits.Models.Media;
+using Limbo.Umbraco.Access.Rules.Blocks.Models.Content;
+using Limbo.Umbraco.Access.Rules.Blocks.Models.Media;
 
 namespace Limbo.Umbraco.Access.Rules {
     public class RuleCollection {

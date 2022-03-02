@@ -31,11 +31,11 @@ public class AccessRulesComponent : IComponent
 
 ```
 
-This example shows how to limit a user group to only being able to rename item on level 2 in the content tree.
+This example shows how to Block a user group to only being able to rename item on level 2 in the content tree.
 
 ## Reference
 In this project `Allow` means that a user is allowed to perfome one or more action on the selected items and not on anything other.
-`Limit` therefore means the oppsiste. When you use a limit you're only dening access to the selected items.
+`Block` therefore means the opposite. When you use a Block you're only dening access to the selected items.
 
 The following rule types exsists:
 
@@ -47,10 +47,10 @@ The following rule types exsists:
 - `AllowMediaLevelAccessRule`
 - `AllowMediaTypeAccessRule`
 
-- `LimitContentAccessRule`
-- `LimitContentLevelAccessRule`
-- `LimitContentTypeAccessRule`
+- `BlockContentAccessRule`
+- `BlockContentLevelAccessRule`
+- `BlockContentTypeAccessRule`
 
-- `LimitMediaAccessRule`
-- `LimitMediaLevelAccessRule`
-- `LimitMediaTypeAccessRule`
+- `BlockMediaAccessRule`
+- `BlockMediaLevelAccessRule`
+- `BlockMediaTypeAccessRule`

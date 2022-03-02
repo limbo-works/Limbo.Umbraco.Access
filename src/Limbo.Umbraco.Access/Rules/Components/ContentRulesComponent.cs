@@ -1,5 +1,5 @@
 ﻿using Limbo.Umbraco.Access.Rules.Allow.Validators;
-using Limbo.Umbraco.Access.Rules.Limits.Validators;
+using Limbo.Umbraco.Access.Rules.Blocks.Validators;
 using Umbraco.Core.Composing;
 using Umbraco.Core.Events;
 using Umbraco.Core.Logging;

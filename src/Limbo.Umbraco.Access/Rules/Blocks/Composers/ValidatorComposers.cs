@@ -1,8 +1,8 @@
-﻿using Limbo.Umbraco.Access.Rules.Composers;
-using Limbo.Umbraco.Access.Rules.Limits.Validators;
+﻿using Limbo.Umbraco.Access.Rules.Blocks.Validators;
+using Limbo.Umbraco.Access.Rules.Composers;
 using Umbraco.Core.Composing;
 
-namespace Limbo.Umbraco.Access.Rules.Limits.Composers {
+namespace Limbo.Umbraco.Access.Rules.Blocks.Composers {
     [ComposeAfter(typeof(RuleCollectionComposer))]
     public class ValidatorComposers : IUserComposer {
         public void Compose(Composition composition) {
