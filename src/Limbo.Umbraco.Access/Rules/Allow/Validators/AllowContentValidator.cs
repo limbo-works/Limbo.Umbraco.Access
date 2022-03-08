@@ -16,15 +16,15 @@ namespace Limbo.Umbraco.Access.Rules.Allow.Validators {
             var isAllowed = true;
             foreach (var rule in rules) {
                 if (rule is AllowContentLevelAccessRule contentLevelAccessRule) {
-                    if (!contentItems.All(item => item.Level == contentLevelAccessRule.Level)) {
+                    if (!IsUserInUserGroups(user, rule) && !contentItems.All(item => item.Level == contentLevelAccessRule.Level)) {
                         isAllowed = false;
                     }
                 } else if (rule is AllowContentTypeAccessRule contentContentTypeAccessRule) {
-                    if (!contentItems.All(item => item.ContentType.Alias == contentContentTypeAccessRule.ContentTypeAlias)) {
+                    if (!IsUserInUserGroups(user, rule) && !contentItems.All(item => item.ContentType.Alias == contentContentTypeAccessRule.ContentTypeAlias)) {
                         isAllowed = false;
                     }
                 } else if (rule is AllowContentAccessRule) {
-                    if (!rule.UserGroups.Any(group => user.Groups.Any(userGroup => userGroup == group))) {
+                    if (!IsUserInUserGroups(user, rule)) {
                         isAllowed = false;
                     }
                 }

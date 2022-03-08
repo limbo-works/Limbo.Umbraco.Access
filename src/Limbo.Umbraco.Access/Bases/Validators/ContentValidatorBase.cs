@@ -125,5 +125,9 @@ namespace Limbo.Umbraco.Access.Bases.Validators {
         public bool IsUnPublishActionValid(IContentService sender, PublishEventArgs<IContent> e) {
             return IsActionValid(ContentUserAction.Unpublish, _rules, e.PublishedEntities, sender);
         }
+
+        protected static bool IsUserInUserGroups(IUser user, ContentAccessRuleBase rule) {
+            return rule.UserGroups.Any(group => user.Groups.Any(userGroup => userGroup.Alias == group.Alias));
+        }
     }
 }
