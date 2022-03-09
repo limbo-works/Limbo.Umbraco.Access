@@ -20,11 +20,11 @@ namespace Limbo.Umbraco.Access.Rules.Allow.Validators {
                         isAllowed = false;
                     }
                 } else if (rule is AllowMediaTypeAccessRule contentContentTypeAccessRule) {
-                    if (!mediaItems.All(item => item.ContentType.Alias == contentContentTypeAccessRule.MediaType)) {
+                    if (!IsUserInUserGroups(user, rule) && !mediaItems.All(item => item.ContentType.Alias == contentContentTypeAccessRule.MediaType)) {
                         isAllowed = false;
                     }
                 } else if (rule is AllowMediaAccessRule) {
-                    if (!rule.UserGroups.Any(group => user.Groups.Any(userGroup => userGroup == group))) {
+                    if (!IsUserInUserGroups(user, rule)) {
                         isAllowed = false;
                     }
                 }

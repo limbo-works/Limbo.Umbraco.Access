@@ -100,5 +100,9 @@ namespace Limbo.Umbraco.Access.Bases.Validators {
         public bool IsTrashActionValid(IMediaService sender, MoveEventArgs<IMedia> e) {
             return IsActionValid(MediaUserAction.Trash, _rules, e.MoveInfoCollection?.Select(item => item.Entity), sender);
         }
+
+        protected static bool IsUserInUserGroups(IUser user, MediaAccessRuleBase rule) {
+            return rule.UserGroups.Any(group => user.Groups.Any(userGroup => userGroup.Alias == group.Alias));
+        }
     }
 }
