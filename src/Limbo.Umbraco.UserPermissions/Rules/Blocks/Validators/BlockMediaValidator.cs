@@ -11,7 +11,7 @@ using Umbraco.Web;
 
 namespace Limbo.Umbraco.UserPermissions.Rules.Blocks.Validators {
     public class BlockMediaValidator : MediaValidatorBase {
-        public BlockMediaValidator(RuleCollection rules, IUmbracoContextAccessor umbracoContextAccessor, ILogger logger) : base(umbracoContextAccessor, rules.MediaLimits, logger) { }
+        public BlockMediaValidator(RuleCollection rules, IUmbracoContextAccessor umbracoContextAccessor, ILogger logger) : base(umbracoContextAccessor, rules.MediaBlocks, logger) { }
 
         protected override bool UserIsAllowedToDoAction(IEnumerable<MediaAccessRuleBase> rules, IUser user, IEnumerable<IMedia> mediaItems, IMediaService mediaService) {
             var isAllowed = true;

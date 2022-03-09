@@ -11,7 +11,7 @@ using Umbraco.Web;
 
 namespace Limbo.Umbraco.UserPermissions.Rules.Blocks.Validators {
     public class BlockContentValidator : ContentValidatorBase {
-        public BlockContentValidator(RuleCollection rules, IUmbracoContextAccessor umbracoContextAccessor, ILogger logger) : base(umbracoContextAccessor, rules.ContentLimits, logger) { }
+        public BlockContentValidator(RuleCollection rules, IUmbracoContextAccessor umbracoContextAccessor, ILogger logger) : base(umbracoContextAccessor, rules.ContentBlocks, logger) { }
 
         protected override bool UserIsAllowedToDoAction(IEnumerable<ContentAccessRuleBase> rules, IUser user, IEnumerable<IContent> contentItems, IContentService contentService) {
             var isAllowed = true;

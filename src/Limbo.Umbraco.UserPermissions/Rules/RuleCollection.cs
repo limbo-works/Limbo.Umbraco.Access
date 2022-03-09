@@ -7,8 +7,8 @@ using Limbo.Umbraco.UserPermissions.Rules.Blocks.Models.Media;
 namespace Limbo.Umbraco.UserPermissions.Rules {
     public class RuleCollection {
         public ICollection<AllowContentAccessRule> ContentAllows { get; set; } = new List<AllowContentAccessRule>();
-        public ICollection<BlockContentAccessRule> ContentLimits { get; set; } = new List<BlockContentAccessRule>();
+        public ICollection<BlockContentAccessRule> ContentBlocks { get; set; } = new List<BlockContentAccessRule>();
         public ICollection<AllowMediaAccessRule> MediaAllows { get; set; } = new List<AllowMediaAccessRule>();
-        public ICollection<BlockMediaAccessRule> MediaLimits { get; set; } = new List<BlockMediaAccessRule>();
+        public ICollection<BlockMediaAccessRule> MediaBlocks { get; set; } = new List<BlockMediaAccessRule>();
     }
 }
