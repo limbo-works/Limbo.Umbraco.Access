@@ -3,6 +3,7 @@ using System.Linq;
 using Limbo.Umbraco.UserPermissions.Bases.Validators;
 using Limbo.Umbraco.UserPermissions.Rules.Bases.Models;
 using Limbo.Umbraco.UserPermissions.Rules.Blocks.Models.Media;
+using Umbraco.Core.Logging;
 using Umbraco.Core.Models;
 using Umbraco.Core.Models.Membership;
 using Umbraco.Core.Services;
@@ -10,7 +11,7 @@ using Umbraco.Web;
 
 namespace Limbo.Umbraco.UserPermissions.Rules.Blocks.Validators {
     public class BlockMediaValidator : MediaValidatorBase {
-        public BlockMediaValidator(RuleCollection rules, IUmbracoContextAccessor umbracoContextAccessor) : base(umbracoContextAccessor, rules.MediaLimits) { }
+        public BlockMediaValidator(RuleCollection rules, IUmbracoContextAccessor umbracoContextAccessor, ILogger logger) : base(umbracoContextAccessor, rules.MediaLimits, logger) { }
 
         protected override bool UserIsAllowedToDoAction(IEnumerable<MediaAccessRuleBase> rules, IUser user, IEnumerable<IMedia> mediaItems, IMediaService mediaService) {
             var isAllowed = true;

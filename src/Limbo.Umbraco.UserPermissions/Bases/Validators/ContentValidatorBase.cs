@@ -3,6 +3,7 @@ using Limbo.Umbraco.UserPermissions.UserActions.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Umbraco.Core.Events;
+using Umbraco.Core.Logging;
 using Umbraco.Core.Models;
 using Umbraco.Core.Models.Membership;
 using Umbraco.Core.Services;
@@ -12,7 +13,7 @@ namespace Limbo.Umbraco.UserPermissions.Bases.Validators {
     public abstract class ContentValidatorBase : ValidatorBase, IContentValidator {
         private readonly IEnumerable<ContentAccessRuleBase> _rules;
 
-        public ContentValidatorBase(IUmbracoContextAccessor umbracoContextAccessor, IEnumerable<ContentAccessRuleBase> rules) : base(umbracoContextAccessor) {
+        public ContentValidatorBase(IUmbracoContextAccessor umbracoContextAccessor, IEnumerable<ContentAccessRuleBase> rules, ILogger logger) : base(umbracoContextAccessor, logger) {
             _rules = rules;
         }
 
