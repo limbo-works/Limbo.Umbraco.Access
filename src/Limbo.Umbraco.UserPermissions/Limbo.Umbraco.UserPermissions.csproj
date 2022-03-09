@@ -29,8 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="UmbracoCms.Core" Version="8.0.0" />
-    <PackageReference Include="UmbracoCms.Web" Version="8.0.0" />
+    <PackageReference Include="UmbracoCms.Core" Version="8.1.0" />
+    <PackageReference Include="UmbracoCms.Web" Version="8.1.0" />
   </ItemGroup>
 
   <ItemGroup>
