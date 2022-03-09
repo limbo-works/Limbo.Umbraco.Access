@@ -1,4 +1,4 @@
-# Limbo.Umbraco.Access
+# Limbo.Umbraco.UserPermissions
 A package for limiting user access to content and media in Umbraco
 
 ## Content
@@ -9,7 +9,7 @@ A package for limiting user access to content and media in Umbraco
 
 ### Install
 ```
-dotnet add package Limbo.Umbraco.Access
+dotnet add package Limbo.Umbraco.UserPermissions
 ```
 
 ### Description
