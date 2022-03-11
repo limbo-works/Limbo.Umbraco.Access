@@ -41,4 +41,9 @@
     <PackageReference Include="UmbracoCms.Web" Version="8.1.0" />
   </ItemGroup>
 
+  <!-- Include package icon for NuGet -->
+  <ItemGroup>
+    <Content Include="../build/Limbo.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
 </Project>
