@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.1.0](https://github.com/limbo-works/Limbo.Umbraco.UserPermissions/compare/v1.0.0...v1.1.0) (2022-03-11)
+## 1.0.0 (2022-03-11)
 
 
 ### Features
@@ -18,5 +18,3 @@ All notable changes to this project will be documented in this file. See [standa
 * Added null check ([9a1b256](https://github.com/limbo-works/Limbo.Umbraco.UserPermissions/commit/9a1b256858cb89fac90b8fd1bb7bd6e815134c9c))
 * Fixes usergroup check ([#1](https://github.com/limbo-works/Limbo.Umbraco.UserPermissions/issues/1)) ([62904eb](https://github.com/limbo-works/Limbo.Umbraco.UserPermissions/commit/62904eb8cf98e6eea9ad8047fc01be2ac3453a01))
 * Renamed Limit to Block ([c96dfc5](https://github.com/limbo-works/Limbo.Umbraco.UserPermissions/commit/c96dfc5517474f7f5080e9e9d5e3458e611de709))
-
-## 1.0.0 (2022-03-01)
